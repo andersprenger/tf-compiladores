@@ -1,0 +1,19 @@
+Olá professor
+
+Não conseguimos realizar a geração correta para o quarto caso (condicional com "?" e ":"). Pelo que lemos 
+(e inclusive acho que o senhor citou em aula), o problema está na arquitetura de passagem única do compilador.
+Ele gera o código em assembly diretamente durante a análise sintática, em vez de criar uma representação intermediária do código. 
+
+Pro operador condicional (cond ? exp_true : exp_false), isso significa que as três sub-expressões são processadas
+e têm seu código gerado antes que a regra principal possa decidir qual caminho seguir. E parece que o  correto seria avaliar apenas 
+a condição cond e, com base em seu resultado, executar e retornar o valor de exp_true ou exp_false, ao invés do resultado da avaliação propriamente. 
+
+Portanto não conseguimos gerar a saída esperada pro "teste4Condicional.cmm", a qual deveria ser 
+
+a < b, result deve ser 100: 100
+a > b, result deve ser 200: 200
+
+mas sai
+
+a < b, result deve ser 100: 1
+a > b, result deve ser 200: 0

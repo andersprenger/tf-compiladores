@@ -9,10 +9,10 @@ void main() {
     b = 20;
 
     result = (a < b) ? 100 : 200;
-    write("a < b, result deve ser 1: ", result);
+    write("a < b, result deve ser 100: ", result);
     
     a = 30;
     
     result = (a < b) ? 100 : 200;
-    write("a > b, result deve ser 0 ", result);
+    write("a > b, result deve ser 200: ", result);
 }
