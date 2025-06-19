@@ -1,0 +1,18 @@
+$TRACE_OFF
+
+int a;
+int b;
+int result;
+
+void main() {
+    a = 10;
+    b = 20;
+
+    result = (a < b) ? 100 : 200;
+    write("a < b, result deve ser 1: ", result);
+    
+    a = 30;
+    
+    result = (a < b) ? 100 : 200;
+    write("a > b, result deve ser 0 ", result);
+}

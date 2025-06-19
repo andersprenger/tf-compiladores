@@ -1,0 +1,21 @@
+$TRACE_OFF
+
+int i;
+
+void main() {
+    write("Testando break e continue de 0 a 9");
+    
+    for (i = 0; i < 10; ) {
+        i++;
+        if ((i % 2) == 0) {
+            continue;
+        }
+        
+        if (i == 7) {
+            break;
+        }
+        write("i = ", i);
+    }
+    
+    write("Fim do laco.");
+}

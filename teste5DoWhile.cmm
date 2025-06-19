@@ -1,0 +1,23 @@
+$TRACE_OFF
+
+int i;
+
+void main() {
+    i = 0;
+    
+    write("Primeiro loop (i=0; i<3)");
+    do {
+        write("i = ", i);
+        i++;
+    } while (i < 3);
+
+    write(" ");
+    write("Segundo loop (i=5; i<3)");
+    i = 5;
+    do {
+        write("i = ", i);
+        i++;
+    } while (i < 3);
+    
+    write("Fim.");
+}

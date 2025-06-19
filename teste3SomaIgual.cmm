@@ -1,0 +1,16 @@
+$TRACE_OFF
+
+int a;
+int b;
+
+void main() {
+    a = 10;
+    b = 5;
+
+    write("a inicial: ", a);
+    write("b inicial: ", b);
+
+    a += b;
+    
+    write("a apos a += b: ", a);
+}
